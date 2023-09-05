@@ -4,6 +4,16 @@ A collection of plugins that extend [Caldera](https://github.com/mitre/caldera) 
 
 This repository contains all the Caldera for OT plugins as git submodules. As described in each individual plugin README, it is also possible to `git clone` a specific protocol plugin directly into the Caldera `plugins` directory, following the "Installation" guidance.
 
+## Install Caldera for OT Plugins
+
+`git clone --recursive git@github.com:mitre/caldera-ot.git`
+
+Or, setup a speciifc plugin individually: 
+* [bacnet](https://github.com/mitre/bacnet)
+* [dnp3](https://github.com/mitre/dnp3)
+* [modbus](https://github.com/mitre/modbus)
+
+
 ## What are the Caldera for OT plugins?
 
 The Caldera for OT plugins unify and expose open-source OT protocol libraries in the form of protocol specific plugins:
