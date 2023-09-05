@@ -4,5 +4,5 @@ authors:
 - name: "MITRE Corporation"
 title: "CALDERA for OT: Caldera plugins for the OT Environment"
 version: 1.0.0
-date-released: 2023-##-## 
+date-released: 2023-09-05 
 url: "https://github.com/mitre/caldera-ot"
