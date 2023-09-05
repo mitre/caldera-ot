@@ -1,4 +1,9 @@
 # Caldera for OT Plugins
+<<<<<<< HEAD
+"We’re giving her all she’s got, Captain! But we’re anticipating a mid-September code release."
+
+Email OT@mitre.org to be added to the release notification list.
+=======
 
 A collection of plugins that extend [Caldera](https://github.com/mitre/caldera) to the Operational Technology (OT) environment.
 
@@ -25,3 +30,4 @@ Also see our presentation on [Emulating Adversary Actions in the Operational Env
 ## Contact
 
 Please reach out to OT@mitre.org with comments, questions, and to discuss collaboration opportunities.
+>>>>>>> caldera-for-ot
