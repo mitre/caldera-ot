@@ -8,7 +8,7 @@ This repository contains all the Caldera for OT plugins as git submodules. As de
 
 `git clone --recursive git@github.com:mitre/caldera-ot.git`
 
-Or, setup a speciifc plugin individually: 
+Or, setup a specific plugin individually: 
 * [bacnet](https://github.com/mitre/bacnet)
 * [dnp3](https://github.com/mitre/dnp3)
 * [modbus](https://github.com/mitre/modbus)
