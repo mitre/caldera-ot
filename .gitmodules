@@ -1,12 +1,12 @@
 [submodule "bacnet"]
 	path = bacnet
-	url = git@github.com:mitre/bacnet.git
+	url = https://github.com/mitre/bacnet
 	branch = main
 [submodule "modbus"]
 	path = modbus
-	url = git@github.com:mitre/modbus.git
+	url = https://github.com/mitre/modbus
 	branch = main
 [submodule "dnp3"]
 	path = dnp3
-	url = git@github.com:mitre/dnp3.git
+	url = https://github.com/mitre/dnp3
 	branch = main
