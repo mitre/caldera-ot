@@ -6,7 +6,7 @@ This repository contains all the Caldera for OT plugins as git submodules. As de
 
 ## Install Caldera for OT Plugins
 
-`git clone --recursive git@github.com:mitre/caldera-ot.git`
+`git clone https://github.com/mitre/caldera-ot.git --recursive`
 
 Or, setup a specific plugin individually: 
 * [bacnet](https://github.com/mitre/bacnet)
