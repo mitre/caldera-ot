@@ -1,19 +1,33 @@
-# Caldera for OT Plugins
+# MITRE Caldera™ for OT Plugins
 
-A collection of plugins that extend [Caldera](https://github.com/mitre/caldera) to the Operational Technology (OT) environment.
+A collection of plugins that extend [MITRE Caldera™](https://github.com/mitre/caldera) to the Operational Technology (OT) environment.
+
+It is built on the [MITRE ATT&CK® for ICS framework](https://attack.mitre.org/matrices/ics/).
 
 This repository contains all the Caldera for OT plugins as git submodules. As described in each individual plugin README, it is also possible to `git clone` a specific protocol plugin directly into the Caldera `plugins` directory, following the "Installation" guidance.
 
 ## Install Caldera for OT Plugins
 
-To install all the Caldera for OT plugins, use the recursive flag while cloning this repo:
+To install all the Caldera for OT plugins, use the recursive flag while cloning this repository:
 
 `git clone https://github.com/mitre/caldera-ot.git --recursive`
 
-Or, setup a specific plugin individually: 
-* [bacnet](https://github.com/mitre/bacnet)
-* [dnp3](https://github.com/mitre/dnp3)
-* [modbus](https://github.com/mitre/modbus)
+Note, that after performing the `git clone`, you will still need to:
+
+1. Ensure the plugin(s) of interest are moved into the `caldera/plugins` directory of your caldera instance
+2. Enable the plugin(s) by adding their names to the `conf/local.yml` or `conf/default.yml` (if running Caldera in insecure mode)
+
+For example, 
+```
+- bacnet
+- dnp3
+- modbus
+```
+
+The OT plugins can also be setup individually:
+* [bacnet](https://github.com/mitre/bacnet#readme)
+* [dnp3](https://github.com/mitre/dnp3#readme)
+* [modbus](https://github.com/mitre/modbus#readme)
 
 
 ## What are the Caldera for OT plugins?
@@ -37,3 +51,5 @@ Also see our presentation on [Emulating Adversary Actions in the Operational Env
 ## Contact
 
 Please reach out to OT@mitre.org with comments, questions, and to discuss collaboration opportunities.
+
+The Caldera for OT team can also be reached on the official [Caldera slack](https://join.slack.com/t/mitre-caldera/shared_invite/zt-rvngjjpw-OQHAqpUT87DcyClTosF8dQ).
