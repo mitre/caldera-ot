@@ -22,12 +22,14 @@ For example,
 - bacnet
 - dnp3
 - modbus
+- profinet
 ```
 
 The OT plugins can also be setup individually:
 * [bacnet](https://github.com/mitre/bacnet#readme)
 * [dnp3](https://github.com/mitre/dnp3#readme)
 * [modbus](https://github.com/mitre/modbus#readme)
+* [profinet](https://github.com/mitre/profinet#readme)
 
 
 ## What are the Caldera for OT plugins?
@@ -36,6 +38,7 @@ The Caldera for OT plugins unify and expose open-source OT protocol libraries in
 * `bacnet` - for the Building Automation and Control Networks (BACnet) protocol
 * `dnp3` - for the Distributed Network Protocol 3 (DNP3)
 * `modbus` - for the Modbus protocol
+* `profinet` - for the Profinet protocol - *Basic Discovery and Configuration Protocol (DCP) only*
 
 Each plugin contains the following documentation:
 * High-level README.md
