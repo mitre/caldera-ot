@@ -10,3 +10,7 @@
 	path = dnp3
 	url = https://github.com/mitre/dnp3.git
 	branch = main
+[submodule "profinet"]
+	path = profinet
+	url = git@github.com:mitre/profinet.git
+	branch = main
