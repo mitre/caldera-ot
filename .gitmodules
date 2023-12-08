@@ -12,5 +12,5 @@
 	branch = main
 [submodule "profinet"]
 	path = profinet
-	url = git@github.com:mitre/profinet.git
+	url =  https://github.com/mitre/profinet.git
 	branch = main
