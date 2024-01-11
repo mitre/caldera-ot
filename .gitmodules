@@ -14,3 +14,7 @@
 	path = profinet
 	url =  https://github.com/mitre/profinet.git
 	branch = main
+[submodule "iec61850"]
+	path = iec61850
+	url = https://github.com/mitre/iec61850.git
+	branch = main

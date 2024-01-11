@@ -23,6 +23,7 @@ For example,
 - dnp3
 - modbus
 - profinet
+- iec61850
 ```
 
 The OT plugins can also be setup individually:
@@ -30,6 +31,7 @@ The OT plugins can also be setup individually:
 * [dnp3](https://github.com/mitre/dnp3#readme)
 * [modbus](https://github.com/mitre/modbus#readme)
 * [profinet](https://github.com/mitre/profinet#readme)
+* [iec61850](https://github.com/mitre/iec61850#readme)
 
 
 ## What are the Caldera for OT plugins?
@@ -39,6 +41,7 @@ The Caldera for OT plugins unify and expose open-source OT protocol libraries in
 * `dnp3` - for the Distributed Network Protocol 3 (DNP3)
 * `modbus` - for the Modbus protocol
 * `profinet` - for the Profinet protocol - *Basic Discovery and Configuration Protocol (DCP) only*
+* `iec61850` - for the IEC 61850 series of communication protocols - *Manufacturing Message Specification (MMS) only*
 
 Each plugin contains the following documentation:
 * High-level README.md
