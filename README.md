@@ -33,6 +33,11 @@ The OT plugins can also be setup individually:
 * [profinet](https://github.com/mitre/profinet#readme)
 * [iec61850](https://github.com/mitre/iec61850#readme)
 
+### Installing the IEC 61850 Payloads
+
+Using the IEC 61850 plugin requires the additional step of installing the plugin's payloads by following these steps:
+1. Download the appropriate compiled payload from the **Releases** section of the [iec61850-payloads](https://github.com/mitre/iec61850-payloads/releases) repository.
+2. Save the downloaded payload file(s) in the `caldera/plugins/iec61850/payloads` directory of your Caldera installation.
 
 ## What are the Caldera for OT plugins?
 
