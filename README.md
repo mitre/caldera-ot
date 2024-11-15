@@ -10,14 +10,16 @@ This repository contains all the Caldera for OT plugins as git submodules. As de
 
 To install all the Caldera for OT plugins, use the recursive flag while cloning this repository:
 
-`git clone https://github.com/mitre/caldera-ot.git --recursive`
+```
+git clone https://github.com/mitre/caldera-ot.git --recursive
+```
 
 Note, that after performing the `git clone`, you will still need to:
 
 1. Ensure the plugin(s) of interest are moved into the `caldera/plugins` directory of your caldera instance
 2. Enable the plugin(s) by adding their names to the `conf/local.yml` or `conf/default.yml` (if running Caldera in insecure mode)
 
-For example, 
+For example,
 ```
 - bacnet
 - dnp3
