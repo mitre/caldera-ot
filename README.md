@@ -26,6 +26,7 @@ For example,
 - modbus
 - profinet
 - iec61850
+- gems
 ```
 
 The OT plugins can also be setup individually:
@@ -34,6 +35,8 @@ The OT plugins can also be setup individually:
 * [modbus](https://github.com/mitre/modbus#readme)
 * [profinet](https://github.com/mitre/profinet#readme)
 * [iec61850](https://github.com/mitre/iec61850#readme)
+* [gems](https://github.com/mitre/gems#readme)
+
 
 ### Installing the IEC 61850 Payloads
 
@@ -65,4 +68,4 @@ Also see our presentation on [Emulating Adversary Actions in the Operational Env
 
 Please reach out to OT@mitre.org with comments, questions, and to discuss collaboration opportunities.
 
-The Caldera for OT team can also be reached on the official [Caldera slack](https://join.slack.com/t/mitre-caldera/shared_invite/zt-rvngjjpw-OQHAqpUT87DcyClTosF8dQ).
+The Caldera for OT team can also be reached on the official [Caldera Discord](https://discord.gg/6bZ2srcqya).
