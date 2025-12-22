@@ -47,16 +47,17 @@ Using the IEC 61850 plugin requires the additional step of installing the plugin
 ## What are the Caldera for OT plugins?
 
 The Caldera for OT plugins unify and expose open-source OT protocol libraries in the form of protocol specific plugins:
-* `bacnet` - for the Building Automation and Control Networks (BACnet) protocol
-* `dnp3` - for the Distributed Network Protocol 3 (DNP3)
-* `modbus` - for the Modbus protocol
-* `profinet` - for the Profinet protocol - *Basic Discovery and Configuration Protocol (DCP) only*
-* `iec61850` - for the IEC 61850 series of communication protocols - *Manufacturing Message Specification (MMS) only*
+* `bacnet` - Building Automation and Control Networks protocol
+* `dnp3` - Distributed Network Protocol 3 protocol
+* `modbus` - Modbus protocol
+* `profinet` - Profinet protocol _(Basic Discovery and Configuration Protocol (DCP) only)_
+* `iec61850` - IEC 61850 series of communication protocols _(Manufacturing Message Specification (MMS) only)_
+* `gems` - Ground Equipment Management Service protocol
 
 Each plugin contains the following documentation:
 * High-level README.md
 * Source code specific README.md (located under `/src`)
-* Caldera Field Manual documentation (located under `/docs`)
+* Caldera `fieldmanual` documentation (located under `/docs`)
 
 ### What is the motivation for the plugins?
 
