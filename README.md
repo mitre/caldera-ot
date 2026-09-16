@@ -65,6 +65,17 @@ The Caldera for OT plugins enable adversary emulation in the OT environment, whi
 
 Also see our presentation on [Emulating Adversary Actions in the Operational Environment with Caldera (TM) for OT](https://speakerdeck.com/bjeffries/emulating-adversary-actions-in-the-operational-environment-with-caldera-for-ot).
 
+## Virtual OT Simulators
+
+To help you exercise the Caldera for OT plugins without any physical hardware, MITRE provides open-source simulators that act as software targets. Each simulates real-world process control behavior over the relevant protocol:
+
+* [Aloha Water Treatment](https://github.com/mitre/aloha-water-treatment) - a simulated water treatment plant using **Modbus** and **BACnet**.
+* [Wildcat Dam](https://github.com/mitre/wildcatdam) - a simulated dam controller using **Modbus**.
+* [Grid Watch](https://github.com/mitre/grid-watch) - a simulated electrical grid outstation using **DNP3**.
+* [HVACSim](https://github.com/mitre/hvac-sim) - a simulated HVAC control system using **BACnet/IP**.
+
+These simulators let you set up an OT network protocol testing environment entirely in software, on a single computer if desired. See each protocol plugin README for protocol-specific guidance.
+
 ## Contact
 
 Please reach out to OT@mitre.org with comments, questions, and to discuss collaboration opportunities.
