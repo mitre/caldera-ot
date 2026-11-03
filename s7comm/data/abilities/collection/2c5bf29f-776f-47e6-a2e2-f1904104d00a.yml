@@ -1,0 +1,47 @@
+---
+
+- id: 2c5bf29f-776f-47e6-a2e2-f1904104d00a
+  name: S7comm - Read Data Block
+  description: |
+    Read a Siemens S7 data block (S7comm Read Var). Discloses process values,
+    setpoints, or program data held in a DB on the target CPU.
+  tactic: collection
+  technique_id: T0801
+  technique_name: Monitor Process State
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./s7comm_cli #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-db #{s7comm.db.number} #{s7comm.db.start} #{s7comm.db.size} --as real
+    payloads:
+    - s7comm_cli
+    parsers:
+    - module: plugins.s7comm.app.parsers.db_set
+      parserconfigs:
+      - source: s7comm.db.address
+        edge: has_value
+        target: s7comm.db.value
+  - platform: windows
+    name: psh
+    command: >
+      .\s7comm_cli.exe #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-db #{s7comm.db.number} #{s7comm.db.start} #{s7comm.db.size} --as real
+    payloads:
+    - s7comm_cli.exe
+    parsers:
+    - module: plugins.s7comm.app.parsers.db_set
+      parserconfigs:
+      - source: s7comm.db.address
+        edge: has_value
+        target: s7comm.db.value
+  - platform: darwin
+    name: sh
+    command: >
+      ./s7comm_cli_darwin #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-db #{s7comm.db.number} #{s7comm.db.start} #{s7comm.db.size} --as real
+    payloads:
+    - s7comm_cli_darwin
+    parsers:
+    - module: plugins.s7comm.app.parsers.db_set
+      parserconfigs:
+      - source: s7comm.db.address
+        edge: has_value
+        target: s7comm.db.value

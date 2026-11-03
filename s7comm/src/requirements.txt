@@ -1,0 +1,3 @@
+# Runtime/build dependency for the s7comm_cli payload.
+# python-snap7 wraps the snap7 library (LGPL-3.0 - see NOTICE.md).
+python-snap7~=3.0

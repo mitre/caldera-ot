@@ -1,0 +1,25 @@
+---
+
+id: d3815829-4a3c-4c47-be8d-409f79cc09ea
+name: S7comm Sample Facts
+facts:
+- trait: s7comm.server.ip
+  value: 127.0.0.1
+- trait: s7comm.server.port
+  value: 102
+- trait: s7comm.rack
+  value: 0
+- trait: s7comm.slot
+  value: 1
+- trait: s7comm.db.number
+  value: 1
+- trait: s7comm.db.start
+  value: 0
+- trait: s7comm.db.size
+  value: 4
+- trait: s7comm.write.value
+  value: 0.0
+- trait: s7comm.szl.id
+  value: "0x0011"
+rules: []
+relationships: []
