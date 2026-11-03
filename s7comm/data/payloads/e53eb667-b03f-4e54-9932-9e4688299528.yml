@@ -1,0 +1,14 @@
+---
+
+id: e53eb667-b03f-4e54-9932-9e4688299528
+name: S7comm Payloads
+standard_payloads:
+  s7comm_cli:
+    description: S7comm client (Linux)
+    id: 4f7966e9-a6f9-4b2d-956e-0ccc5fad5e40
+  s7comm_cli.exe:
+    description: S7comm client (Windows)
+    id: 77831c95-5435-4ae5-abd7-100e2c93cf14
+  s7comm_cli_darwin:
+    description: S7comm client (macOS)
+    id: 92a37cf1-1deb-4ecc-92fe-02a555f65847

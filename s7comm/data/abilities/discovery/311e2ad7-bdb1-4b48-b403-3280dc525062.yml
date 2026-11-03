@@ -1,0 +1,30 @@
+---
+
+- id: 311e2ad7-bdb1-4b48-b403-3280dc525062
+  name: S7comm - Read System Status List
+  description: |
+    Read a Siemens S7 System Status List (SZL), e.g. module identification
+    (0x0011) or component identification (0x001c). Fingerprints the CPU - order
+    number, hardware/firmware version - for target identification.
+  tactic: discovery
+  technique_id: T0846
+  technique_name: Remote System Discovery
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./s7comm_cli #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-szl #{s7comm.szl.id}
+    payloads:
+    - s7comm_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\s7comm_cli.exe #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-szl #{s7comm.szl.id}
+    payloads:
+    - s7comm_cli.exe
+  - platform: darwin
+    name: sh
+    command: >
+      ./s7comm_cli_darwin #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} read-szl #{s7comm.szl.id}
+    payloads:
+    - s7comm_cli_darwin

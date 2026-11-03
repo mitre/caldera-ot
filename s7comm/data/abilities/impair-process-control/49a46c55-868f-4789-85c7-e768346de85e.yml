@@ -1,0 +1,30 @@
+---
+
+- id: 49a46c55-868f-4789-85c7-e768346de85e
+  name: S7comm - Write Data Block
+  description: |
+    Write a value into a Siemens S7 data block (S7comm Write Var). Altering a DB
+    changes a setpoint or process parameter - e.g. a drive-speed setpoint - modifying
+    how the process is controlled (the Stuxnet class of manipulation).
+  tactic: impair-process-control
+  technique_id: T0836
+  technique_name: Modify Parameter
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./s7comm_cli #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} write-db #{s7comm.db.number} #{s7comm.db.start} --real #{s7comm.write.value}
+    payloads:
+    - s7comm_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\s7comm_cli.exe #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} write-db #{s7comm.db.number} #{s7comm.db.start} --real #{s7comm.write.value}
+    payloads:
+    - s7comm_cli.exe
+  - platform: darwin
+    name: sh
+    command: >
+      ./s7comm_cli_darwin #{s7comm.server.ip} --rack #{s7comm.rack} --slot #{s7comm.slot} --port #{s7comm.server.port} write-db #{s7comm.db.number} #{s7comm.db.start} --real #{s7comm.write.value}
+    payloads:
+    - s7comm_cli_darwin
