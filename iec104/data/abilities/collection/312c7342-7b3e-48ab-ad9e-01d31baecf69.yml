@@ -1,0 +1,36 @@
+---
+
+- id: 312c7342-7b3e-48ab-ad9e-01d31baecf69
+  name: IEC 104 - Counter Interrogation
+  description: |
+    IEC 60870-5-104 general counter interrogation (C_CI_NA_1). Requests the
+    integrated totals (counters) held by the outstation - e.g. accumulated energy
+    or run-time values - enumerating counter points and their frozen values.
+  tactic: collection
+  technique_id: T0861
+  technique_name: Point & Tag Identification
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./iec104_cli #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} counter-interrogate
+    payloads:
+    - iec104_cli
+    parsers:
+    - module: plugins.iec104.app.parsers.point_set
+      parserconfigs:
+      - source: iec104.point.ioa
+        edge: has_value
+        target: iec104.point.value
+  - platform: windows
+    name: psh
+    command: >
+      .\iec104_cli.exe #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} counter-interrogate
+    payloads:
+    - iec104_cli.exe
+    parsers:
+    - module: plugins.iec104.app.parsers.point_set
+      parserconfigs:
+      - source: iec104.point.ioa
+        edge: has_value
+        target: iec104.point.value

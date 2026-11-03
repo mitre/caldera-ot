@@ -1,0 +1,21 @@
+---
+
+id: 9b542028-e4cc-49bf-b590-b423a88e9239
+name: IEC 104 Sample Facts
+facts:
+- trait: iec104.server.ip
+  value: 127.0.0.1
+- trait: iec104.server.port
+  value: 2404
+- trait: iec104.common_address
+  value: 1
+- trait: iec104.command.ioa
+  value: 100
+- trait: iec104.command.value
+  value: "ON"      # quoted: an unquoted ON/OFF is a YAML boolean
+- trait: iec104.setpoint.ioa
+  value: 100
+- trait: iec104.setpoint.value
+  value: 0.0
+rules: []
+relationships: []

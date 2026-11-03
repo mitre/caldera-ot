@@ -1,0 +1,11 @@
+---
+
+id: 0da8716c-3d5d-423e-bd7d-a0c2493dd779
+name: IEC 104 Payloads
+standard_payloads:
+  iec104_cli:
+    description: IEC 104 master client (Linux)
+    id: e8c01010-e636-4301-b624-582f7da67106
+  iec104_cli.exe:
+    description: IEC 104 master client (Windows)
+    id: 1b27da5a-f41e-4a0f-9542-46dce4f7b1c2
