@@ -1,0 +1,14 @@
+---
+
+id: 917582a5-f96a-4f83-823a-fe9abfa228ad
+name: OPC-UA Payloads
+standard_payloads:
+  opcua_cli:
+    description: OPC-UA client (Linux)
+    id: 1261e475-815f-435c-a720-5cf04844526a
+  opcua_cli.exe:
+    description: OPC-UA client (Windows)
+    id: 9da46447-b955-490e-92df-2824fc03904f
+  opcua_cli_darwin:
+    description: OPC-UA client (macOS)
+    id: f44c3a85-8f20-420b-a9c2-3b7731630840

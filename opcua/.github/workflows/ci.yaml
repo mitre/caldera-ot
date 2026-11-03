@@ -1,0 +1,64 @@
+# SPDX-License-Identifier: Apache-2.0
+name: build-and-test
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            artifact: opcua_cli
+          - os: windows-2022
+            artifact: opcua_cli.exe
+          - os: macos-14
+            artifact: opcua_cli_darwin
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r src/requirements.txt pyinstaller pytest
+      - name: Test
+        env:
+          PYTHONPATH: src
+        run: python -m pytest tests -q
+      - name: Build payload
+        working-directory: src
+        run: pyinstaller --clean opcua_cli.spec
+      - name: Normalize artifact name
+        shell: bash
+        working-directory: src/dist
+        run: |
+          target="${{ matrix.artifact }}"
+          built=$(ls | head -1)
+          if [ "$built" != "$target" ]; then mv "$built" "$target"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: src/dist/${{ matrix.artifact }}
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: artifacts/**/*

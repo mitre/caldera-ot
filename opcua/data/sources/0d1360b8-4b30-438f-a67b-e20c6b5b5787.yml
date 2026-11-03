@@ -1,0 +1,25 @@
+---
+
+id: 0d1360b8-4b30-438f-a67b-e20c6b5b5787
+name: OPC-UA Sample Facts
+facts:
+- trait: opcua.server.endpoint
+  value: 127.0.0.1
+- trait: opcua.server.port
+  value: 4840
+- trait: opcua.browse.node
+  value: "i=85"
+- trait: opcua.browse.depth
+  value: 1
+- trait: opcua.node.id
+  value: "i=2258"
+- trait: opcua.write.value
+  value: 0
+- trait: opcua.write.type
+  value: float
+- trait: opcua.method.object
+  value: "i=85"
+- trait: opcua.method.node
+  value: "i=85"
+rules: []
+relationships: []

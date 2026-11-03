@@ -27,6 +27,7 @@ For example,
 - profinet
 - iec61850
 - gems
+- opcua
 ```
 
 The OT plugins can also be setup individually:
@@ -36,6 +37,7 @@ The OT plugins can also be setup individually:
 * [profinet](https://github.com/mitre/profinet#readme)
 * [iec61850](https://github.com/mitre/iec61850#readme)
 * [gems](https://github.com/mitre/gems#readme)
+* [opcua](opcua/README.md)
 
 
 ### Installing the IEC 61850 Payloads
@@ -53,6 +55,7 @@ The Caldera for OT plugins unify and expose open-source OT protocol libraries in
 * `profinet` - Profinet protocol _(Basic Discovery and Configuration Protocol (DCP) only)_
 * `iec61850` - IEC 61850 series of communication protocols _(Manufacturing Message Specification (MMS) only)_
 * `gems` - Ground Equipment Management Service protocol
+* `opcua` - OPC Unified Architecture protocol
 
 Each plugin contains the following documentation:
 * High-level README.md
