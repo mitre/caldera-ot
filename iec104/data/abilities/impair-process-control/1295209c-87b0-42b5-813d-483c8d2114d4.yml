@@ -1,0 +1,26 @@
+---
+
+- id: 1295209c-87b0-42b5-813d-483c8d2114d4
+  name: IEC 104 - Single Command
+  description: |
+    Send an IEC 60870-5-104 single command (C_SC_NA_1) to a control point,
+    driving it ON or OFF. An unauthorized single command can operate breakers,
+    pumps, valves, or other single-point actuators on the outstation. Use
+    #{iec104.command.select} handling via the payload's select-before-operate
+    option where the outstation requires it.
+  tactic: impair-process-control
+  technique_id: T0855
+  technique_name: Unauthorized Command Message
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./iec104_cli #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} single-command #{iec104.command.ioa} #{iec104.command.value}
+    payloads:
+    - iec104_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\iec104_cli.exe #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} single-command #{iec104.command.ioa} #{iec104.command.value}
+    payloads:
+    - iec104_cli.exe

@@ -1,0 +1,25 @@
+---
+
+- id: 46f97617-bf11-41e7-b064-9f825822f8a7
+  name: IEC 104 - Clock Synchronization
+  description: |
+    Send an IEC 60870-5-104 clock synchronization command (C_CS_NA_1), setting the
+    outstation's clock. Manipulating an outstation's time can misalign event time
+    stamps and sequence-of-events records, undermining the operator's view of the
+    process.
+  tactic: impair-process-control
+  technique_id: T0855
+  technique_name: Unauthorized Command Message
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./iec104_cli #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} clock-sync
+    payloads:
+    - iec104_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\iec104_cli.exe #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} clock-sync
+    payloads:
+    - iec104_cli.exe

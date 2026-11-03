@@ -27,6 +27,7 @@ For example,
 - profinet
 - iec61850
 - gems
+- iec104
 ```
 
 The OT plugins can also be setup individually:
@@ -36,6 +37,7 @@ The OT plugins can also be setup individually:
 * [profinet](https://github.com/mitre/profinet#readme)
 * [iec61850](https://github.com/mitre/iec61850#readme)
 * [gems](https://github.com/mitre/gems#readme)
+* [iec104](iec104/README.md)
 
 
 ### Installing the IEC 61850 Payloads
@@ -43,6 +45,12 @@ The OT plugins can also be setup individually:
 Using the IEC 61850 plugin requires the additional step of installing the plugin's payloads by following these steps:
 1. Download the appropriate compiled payload from the **Releases** section of the [iec61850-payloads](https://github.com/mitre/iec61850-payloads/releases) repository.
 2. Save the downloaded payload file(s) in the `caldera/plugins/iec61850/payloads` directory of your Caldera installation.
+
+### Installing the IEC 104 Payloads
+
+Using the IEC 104 plugin requires the additional step of installing the plugin's payloads by following these steps:
+1. Download the appropriate compiled payload from the **Releases** section of the [iec104-payloads](https://github.com/AsherDLL/iec104-payloads/releases) repository.
+2. Save the downloaded payload file(s) in the `caldera/plugins/iec104/payloads` directory of your Caldera installation.
 
 ## What are the Caldera for OT plugins?
 
@@ -53,6 +61,7 @@ The Caldera for OT plugins unify and expose open-source OT protocol libraries in
 * `profinet` - Profinet protocol _(Basic Discovery and Configuration Protocol (DCP) only)_
 * `iec61850` - IEC 61850 series of communication protocols _(Manufacturing Message Specification (MMS) only)_
 * `gems` - Ground Equipment Management Service protocol
+* `iec104` - IEC 60870-5-104 telecontrol protocol
 
 Each plugin contains the following documentation:
 * High-level README.md
