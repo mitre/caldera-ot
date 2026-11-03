@@ -1,0 +1,57 @@
+<div>
+    <div>
+        <h2>{{ name }} Protocol Plugin</h2>
+        <p>{{ description }}</p>
+    </div>
+    <hr>
+    <h3>Documentation</h3>
+    <p>
+        Get started by referencing the
+        <a href="/docs/plugins/{{ name.lower() }}/{{ name.lower() }}.html" target="_blank">{{ name }} Plugin Fieldmanual</a>.
+    </p>
+    <h3>Abilities</h3>
+    <div class="columns abilities is-multiline">
+        {% for a in abilities %}
+            <div class="column is-one-quarter p-1 m-0">
+                <div class="box otbox p-3 m-1" @mouseleave="handleBoxExit">
+                    <div class="abilitytags">
+                        <span class="tag tactic is-dark m-0 mb-1">{{a.tactic}}</span><br>
+                    </div>
+                    <div class="inner_otbox">
+                        <p>
+                            <span class="has-text-weight-bold">{{a.name}}</span>
+                            ({{a.technique_id}}: {{a.technique_name}})
+                        </p>
+                        <p class="help mb-0">{{a.description|safe}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <h3>Adversaries</h3>
+    <p>There are no custom {{ name }} adversaries at this time.</p>
+</div>
+
+<script>
+
+function handleBoxExit(e){
+    e.target.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+<style>
+.otbox{
+    height: 200px;
+    background-color: var(--primary-color-translucent);
+    overflow-y: hidden;
+}
+.otbox:hover{
+    outline: 3px;
+    outline-color: var(--primary-color);
+    outline-style: solid;
+    overflow-y: scroll;
+}
+.inner_otbox{
+    margin-right: 15px;
+}
+</style>

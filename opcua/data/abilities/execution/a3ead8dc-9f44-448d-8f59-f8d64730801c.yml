@@ -1,0 +1,30 @@
+---
+
+- id: a3ead8dc-9f44-448d-8f59-f8d64730801c
+  name: OPC-UA - Call Method
+  description: |
+    Call an OPC-UA method exposed by an object node. Server-defined methods can
+    trigger device actions (start/stop, reset, mode change); invoking one executes
+    functionality through the OPC-UA API.
+  tactic: execution
+  technique_id: T0871
+  technique_name: Execution through API
+  executors:
+  - platform: linux
+    name: sh
+    command: >
+      ./opcua_cli #{opcua.server.endpoint} --port #{opcua.server.port} call-method "#{opcua.method.object}" "#{opcua.method.node}"
+    payloads:
+    - opcua_cli
+  - platform: windows
+    name: psh
+    command: >
+      .\opcua_cli.exe #{opcua.server.endpoint} --port #{opcua.server.port} call-method "#{opcua.method.object}" "#{opcua.method.node}"
+    payloads:
+    - opcua_cli.exe
+  - platform: darwin
+    name: sh
+    command: >
+      ./opcua_cli_darwin #{opcua.server.endpoint} --port #{opcua.server.port} call-method "#{opcua.method.object}" "#{opcua.method.node}"
+    payloads:
+    - opcua_cli_darwin
