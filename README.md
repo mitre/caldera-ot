@@ -1,6 +1,6 @@
 # MITRE Caldera™ for OT Plugins
 
-A collection of plugins that extend [MITRE Caldera™](https://github.com/mitre/caldera) to the Operational Technology (OT) environment.
+A collection of plugins that extend [Apache Caldera™](https://github.com/apache/caldera) to the Operational Technology (OT) environment.
 
 It is built on the [MITRE ATT&CK® for ICS framework](https://attack.mitre.org/matrices/ics/).
 
@@ -61,7 +61,7 @@ Each plugin contains the following documentation:
 
 ### What is the motivation for the plugins?
 
-The Caldera for OT plugins enable adversary emulation in the OT environment, which supports traditional Caldera [use cases](https://caldera.mitre.org/). For example, training and testing of operators and defenses.
+The Caldera for OT plugins enable adversary emulation in the OT environment, which supports traditional Caldera [use cases](https://caldera.apache.org/). For example, training and testing of operators and defenses.
 
 Also see our presentation on [Emulating Adversary Actions in the Operational Environment with Caldera (TM) for OT](https://speakerdeck.com/bjeffries/emulating-adversary-actions-in-the-operational-environment-with-caldera-for-ot).
 
