@@ -1,0 +1,14 @@
+---
+
+id: 8b2511de-93c4-4002-ab1b-78b600f301f9
+name: M-Bus Payloads
+standard_payloads:
+  mbus_cli:
+    description: M-Bus client (Linux)
+    id: eb48b8fb-4eb2-4959-adcb-07c28aa12ced
+  mbus_cli.exe:
+    description: M-Bus client (Windows)
+    id: 573e72ce-1318-4d24-8598-7c75fb13dd36
+  mbus_cli_darwin:
+    description: M-Bus client (macOS)
+    id: a48f3f28-cb16-481b-8584-2c8d90e9da69

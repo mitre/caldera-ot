@@ -1,0 +1,17 @@
+---
+
+id: 838e222e-cab6-407f-a277-5755f0f7caf1
+name: M-Bus Sample Facts
+facts:
+- trait: mbus.server.ip
+  value: 127.0.0.1
+- trait: mbus.server.port
+  value: 5000
+- trait: mbus.address
+  value: 1
+- trait: mbus.scan.start
+  value: 1
+- trait: mbus.scan.end
+  value: 5
+rules: []
+relationships: []
