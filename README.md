@@ -52,7 +52,7 @@ The Caldera for OT plugins unify and expose open-source OT protocol libraries in
 * `modbus` - Modbus protocol
 * `profinet` - Profinet protocol _(Basic Discovery and Configuration Protocol (DCP) only)_
 * `iec61850` - IEC 61850 series of communication protocols _(Manufacturing Message Specification (MMS) only)_
-* `gems` - Ground Equipment Management Service protocol
+* `gems` - Ground Equipment Monitoring Service protocol
 
 Each plugin contains the following documentation:
 * High-level README.md
