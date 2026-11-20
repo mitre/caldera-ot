@@ -33,17 +33,23 @@ For example,
 - mbus
 ```
 
-The OT plugins can also be setup individually:
+The OT plugins can also be setup individually.
+
+Maintained by MITRE:
 * [bacnet](https://github.com/mitre/bacnet#readme)
 * [dnp3](https://github.com/mitre/dnp3#readme)
 * [modbus](https://github.com/mitre/modbus#readme)
 * [profinet](https://github.com/mitre/profinet#readme)
 * [iec61850](https://github.com/mitre/iec61850#readme)
 * [gems](https://github.com/mitre/gems#readme)
-* [iec104](https://github.com/mitre/iec104#readme)
-* [s7comm](https://github.com/mitre/s7comm#readme)
-* [opcua](https://github.com/mitre/opcua#readme)
-* [mbus](https://github.com/mitre/mbus#readme)
+
+Contributed by the community and not maintained by MITRE:
+* [iec104](https://github.com/mitre/iec104#readme), contributed by Palo Alto Networks
+* [s7comm](https://github.com/mitre/s7comm#readme), contributed by Palo Alto Networks
+* [opcua](https://github.com/mitre/opcua#readme), contributed by Palo Alto Networks
+* [mbus](https://github.com/mitre/mbus#readme), contributed by Palo Alto Networks
+
+We welcome community plugins and any collaborations or new ideas. If you have built a plugin, or there is a protocol you would like to see covered, open an issue or a pull request.
 
 
 ### Installing the IEC 61850 Payloads
