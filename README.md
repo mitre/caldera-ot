@@ -27,9 +27,15 @@ For example,
 - profinet
 - iec61850
 - gems
+- iec104
+- s7comm
+- opcua
+- mbus
 ```
 
-The OT plugins can also be setup individually:
+The OT plugins can also be setup individually.
+
+Maintained by MITRE:
 * [bacnet](https://github.com/mitre/bacnet#readme)
 * [dnp3](https://github.com/mitre/dnp3#readme)
 * [modbus](https://github.com/mitre/modbus#readme)
@@ -37,12 +43,26 @@ The OT plugins can also be setup individually:
 * [iec61850](https://github.com/mitre/iec61850#readme)
 * [gems](https://github.com/mitre/gems#readme)
 
+Contributed by the community and not maintained by MITRE:
+* [iec104](https://github.com/mitre/iec104#readme), contributed by Palo Alto Networks
+* [s7comm](https://github.com/mitre/s7comm#readme), contributed by Palo Alto Networks
+* [opcua](https://github.com/mitre/opcua#readme), contributed by Palo Alto Networks
+* [mbus](https://github.com/mitre/mbus#readme), contributed by Palo Alto Networks
+
+Please make a pull request for any contributions or collaborations, or email us at OT@mitre.org.
+
 
 ### Installing the IEC 61850 Payloads
 
 Using the IEC 61850 plugin requires the additional step of installing the plugin's payloads by following these steps:
 1. Download the appropriate compiled payload from the **Releases** section of the [iec61850-payloads](https://github.com/mitre/iec61850-payloads/releases) repository.
 2. Save the downloaded payload file(s) in the `caldera/plugins/iec61850/payloads` directory of your Caldera installation.
+
+### Installing the IEC 104 Payloads
+
+Using the IEC 104 plugin requires the additional step of installing the plugin's payloads by following these steps:
+1. Download the appropriate compiled payload from the **Releases** section of the [iec104-payloads](https://github.com/mitre/iec104-payloads/releases) repository.
+2. Save the downloaded payload file(s) in the `caldera/plugins/iec104/payloads` directory of your Caldera installation.
 
 ## What are the Caldera for OT plugins?
 

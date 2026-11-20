@@ -21,3 +21,19 @@
 [submodule "gems"]
 	path = gems
 	url = https://github.com/mitre/gems.git
+[submodule "iec104"]
+	path = iec104
+	url = https://github.com/mitre/iec104.git
+	branch = main
+[submodule "s7comm"]
+	path = s7comm
+	url = https://github.com/mitre/s7comm.git
+	branch = main
+[submodule "opcua"]
+	path = opcua
+	url = https://github.com/mitre/opcua.git
+	branch = main
+[submodule "mbus"]
+	path = mbus
+	url = https://github.com/mitre/mbus.git
+	branch = main
